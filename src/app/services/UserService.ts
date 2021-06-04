@@ -1,6 +1,6 @@
-const getToken = () => localStorage.getItem("token");
+const getToken = () => typeof window !== 'undefined' && localStorage.getItem("token");
 
-const isLoggedIn = () => !!localStorage.getItem("token"); // TODO check if token is valid
+const isLoggedIn = () => typeof window !== 'undefined' && !!localStorage.getItem("token"); // TODO check if token is valid
 
 const UserService = {
   isLoggedIn,
