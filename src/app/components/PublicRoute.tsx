@@ -17,7 +17,7 @@ const PublicRoute: FC<Props> = ({
     location?.pathname !== `/app/home` &&
     location?.pathname !== `/app/dashboard`
   ) {
-    navigate("/app")
+    typeof window !== "undefined" && navigate("/app")
     return null
   }
   return <Component {...rest} />

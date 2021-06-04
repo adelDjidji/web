@@ -16,7 +16,7 @@ const PrivateRoute: FC<Props> = ({
     location?.pathname !== `/app/login` &&
     location?.pathname !== `/app/register`
   ) {
-    navigate("/app/login")
+    typeof window !== "undefined" && navigate("/app/login")
     return null
   }
   return <Component {...rest} />
