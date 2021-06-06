@@ -1,4 +1,8 @@
 import ContactUs from "../components/ContactUs"
-
-const contactus = () => <ContactUs />
+import Layout from "../components/Layout"
+const contactus = () => (
+  <Layout>
+    <ContactUs />
+  </Layout>
+)
 export default contactus

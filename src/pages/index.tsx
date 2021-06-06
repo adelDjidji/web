@@ -9,7 +9,7 @@ const IndexPage = () => (
     <Seo title="Bohr energie" />
     <Navbar />
     {/* <section className="bg-hero-home md:h-520p h-370p bg-auto bg-top-90 transform flex flex-col justify-center mt-20 md:mt-0"> */}
-    <section className="bg-hero-home bg-no-repeat md:bg-cover bg-auto md:h-520p h-370p flex flex-col justify-center mt-20 md:mt-0 bg-left--53/100">
+    <section className="bg-hero-home bg-no-repeat bg-cover md:h-520p h-370p flex flex-col justify-center mt-20 md:mt-0 bg-left--53/100-top-41/100">
       <h1 className="text-white md:text-6xl text-3xl md:ml-48 ml-10 font-semibold max-w-400 md:mb-5 pt-16 md:pt-0">
         Change
         <br />

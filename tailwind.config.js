@@ -22,7 +22,7 @@ module.exports = {
         "2md": "840px",
       },
       backgroundImage: () => ({
-        "hero-home": "url('/images/hero-home.jpg')",
+        "hero-home": "url('/images/CABECERA_INTRO.jpg')",
         "hero-aboutus": "url('/images/INNOVATIVE_COMPANY.jpg')",
         "hero-benefits": "url('/images/CABECERA_BENEFITS.jpg')",
         "hero-customer": "url('/images/CABECERA_CUSTOMER.jpg')",
