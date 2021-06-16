@@ -11,22 +11,25 @@ const IndexPage = () => {
     <Layout>
       <Seo title="Bohr energie" />
 
+      {/* hero */}
       <section className="bg-hero-home bg-no-repeat bg-cover md:h-520p h-370p flex flex-col justify-center mt-20 md:mt-0 bg-left--53/100-top-41/100">
         <h1 className="text-white md:text-6xl text-3xl md:ml-48 ml-10 font-semibold max-w-400 md:mb-5 pt-16 md:pt-0">
           {t("index.hero.l1")}
           <br />
-          your future.
-          <br /> Change
+          {t("index.hero.l2")}
           <br />
-          your energy!
+          {t("index.hero.l3")}
+          <br />
+          {t("index.hero.l4")}
         </h1>
         <a
           href="#"
           className="m-2 text-white bg-orange-bohr border-orange-bohr rounded-full border-solid border-4 md:py-2 py-1 px-4 w-40 md:ml-48 ml-10 md:mt-16 mt-12"
         >
-          Find out more
+          {t("index.hero.button")}
         </a>
       </section>
+      {/* section 1 */}
       <section className="container mx-auto flex md:flex-row flex-col mt-20 p-8 text-gray-4a">
         <div
           className="flex-1 mb-10 justify-center flex"
@@ -35,7 +38,7 @@ const IndexPage = () => {
           data-sal-easing="ease-out"
         >
           <h2 className="text-2xl md:text-3xl md:max-w-xs">
-            <strong>We are innovative energy</strong>
+            <strong>{t("index.section1.h2")}</strong>
           </h2>
         </div>
         <div
@@ -44,26 +47,23 @@ const IndexPage = () => {
           data-sal-delay="300"
           data-sal-easing="ease-out"
         >
-          <p className="md:max-w-md">
-            Bohr Energie is the power supplier that combines innovation, quality
-            services, and fair prices to improve your business. We will change
-            the way you invest in energy.
-          </p>
+          <p className="md:max-w-md">{t("index.section1.p")}</p>
           <a
             href="#"
             className="block text-white bg-orange-bohr border-orange-bohr rounded-full border-solid border-4 md:py-2 py-1 px-4 w-40 md:mt-16 mt-12"
           >
-            More about us
+            {t("index.section1.button")}
           </a>
         </div>
       </section>
+      {/* section 2 */}
       <section className="container mx-auto mb-20">
         <h2 className="text-2xl text-center mt-20 mb-10 text-gray-4a md:text-3xl">
-          <strong>Our energy solutions</strong>
+          <strong>{t("index.section2.h2")}</strong>
         </h2>
         <Divider />
         <h3 className="text-2xl text-center mt-20 mb-10 md:text-3xl">
-          Find suitable solutions for your unique needs.
+          {t("index.section2.h3")}
         </h3>
         <div className="flex md:flex-row flex-col mt-6 md:p-8 p-2 md:justify-center">
           <div
@@ -74,12 +74,10 @@ const IndexPage = () => {
           >
             <img src="./images/PRODUCTOS.jpg" alt="PRODUCTOS" />
             <h2 className="text-center text-2xl my-8 text-gray-4a md:text-3xl">
-              <strong>Products</strong>
+              <strong>{t("index.section2.h2Products")}</strong>
             </h2>
             <p className="text-center text-gray-222">
-              We create tailor-made energy solutions for your business -no
-              matter what its size or its industry is. We do it to optimize your
-              energy budget.
+              {t("index.section2.pProducts")}
             </p>
           </div>
 
@@ -91,11 +89,10 @@ const IndexPage = () => {
           >
             <img src="./images/SERVICIOS.jpg" alt="SERVICIOS" />
             <h2 className="text-center text-2xl my-8 text-gray-4a md:text-3xl">
-              <strong>Services</strong>
+              <strong>{t("index.section2.h2Services")}</strong>
             </h2>
             <p className="text-center text-gray-222">
-              We help you control your energy consumption by using modern
-              digital tools, with the support of dedicated contact personnel.
+              {t("index.section2.pServices")}
             </p>
           </div>
         </div>
@@ -106,7 +103,7 @@ const IndexPage = () => {
           data-sal-delay="300"
           data-sal-easing="ease-out"
         >
-          Discover more
+          {t("index.section2.button")}
         </a>
       </section>
       <section className="p-1 grid md:grid-cols-2 grid-cols-1  text-white font-semibold">
@@ -123,9 +120,11 @@ const IndexPage = () => {
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full">
             <h2 className="text-4xl text-center md:mb-10 mb-2">
-              Residential Complexes
+              {t("index.section2.h2img1")}
             </h2>
-            <p className="text-center hover:opacity-80">Read More</p>
+            <p className="text-center hover:opacity-80">
+              {t("index.section2.pimg")}
+            </p>
           </div>
         </div>
         <div
@@ -141,9 +140,11 @@ const IndexPage = () => {
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full">
             <h2 className="text-4xl text-center md:mb-10 mb-2">
-              Independent Businesses
+              {t("index.section2.h2img2")}
             </h2>
-            <p className="text-center hover:opacity-80">Read More</p>
+            <p className="text-center hover:opacity-80">
+              {t("index.section2.pimg")}
+            </p>
           </div>
         </div>
 
@@ -160,9 +161,11 @@ const IndexPage = () => {
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full">
             <h2 className="text-4xl text-center md:mb-10 mb-2">
-              Small & Medium Enterprises
+              {t("index.section2.h2img3")}
             </h2>
-            <p className="text-center hover:opacity-80">Read More</p>
+            <p className="text-center hover:opacity-80">
+              {t("index.section2.pimg")}
+            </p>
           </div>
         </div>
         <div
@@ -178,19 +181,22 @@ const IndexPage = () => {
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full">
             <h2 className="text-4xl text-center md:mb-10 mb-2">
-              Corporative & Industrial Complexes
+              {t("index.section2.h2img4")}
             </h2>
-            <p className="text-center hover:opacity-80">Read More</p>
+            <p className="text-center hover:opacity-80">
+              {t("index.section2.pimg")}
+            </p>
           </div>
         </div>
       </section>
+      {/* section3 */}
       <section className="container mx-auto mb-20">
         <h2 className="text-2xl text-center mt-20 mb-10 text-gray-4a md:text-3xl">
-          <strong>Our key benefits</strong>
+          <strong>{t("index.section3.h2")}</strong>
         </h2>
         <Divider />
         <h3 className="text-2xl text-center mt-20 mb-10 md:text-3xl">
-          Contribute to your business and our world.
+          {t("index.section3.h3")}
         </h3>
         <div className="flex md:flex-row flex-col mt-6 md:p-8 p-2 md:justify-center">
           <div
@@ -205,11 +211,10 @@ const IndexPage = () => {
               alt="Digital innovation"
             />
             <h2 className="text-center text-2xl my-8 text-gray-4a md:text-3xl">
-              <strong>Digital innovation</strong>
+              <strong>{t("index.section3.h2img1")}</strong>
             </h2>
             <p className="text-center text-gray-222">
-              User-friendly solutions and smart digital tools that make
-              everything easier.
+              {t("index.section3.pimg1")}
             </p>
 
             <img
@@ -218,11 +223,10 @@ const IndexPage = () => {
               alt="Fair rates"
             />
             <h2 className="text-center text-2xl my-8 text-gray-4a md:text-3xl">
-              <strong>Fair rates</strong>
+              <strong>{t("index.section3.h2img2")}</strong>
             </h2>
             <p className="text-center text-gray-222">
-              Transparent prices that optimize your power consumption and
-              investments.
+              {t("index.section3.pimg2")}
             </p>
           </div>
 
@@ -238,11 +242,10 @@ const IndexPage = () => {
               alt="Personalized attention"
             />
             <h2 className="text-center text-2xl my-8 text-gray-4a md:text-3xl">
-              <strong>Personalized attention</strong>
+              <strong>{t("index.section3.h2img3")}</strong>
             </h2>
             <p className="text-center text-gray-222">
-              Professional support to set up tailor-made integrated energy
-              solutions.
+              {t("index.section3.pimg3")}
             </p>
 
             <img
@@ -251,10 +254,10 @@ const IndexPage = () => {
               alt="Green Energy"
             />
             <h2 className="text-center text-2xl my-8 text-gray-4a md:text-3xl">
-              <strong>Green Energy</strong>
+              <strong>{t("index.section3.h2img4")}</strong>
             </h2>
             <p className="text-center text-gray-222">
-              100% renewable energy to create a sustainable business world.
+              {t("index.section3.pimg4")}
             </p>
           </div>
         </div>
@@ -262,7 +265,7 @@ const IndexPage = () => {
           href="#"
           className="block text-white bg-orange-bohr border-orange-bohr rounded-full border-solid border-4 md:py-2 py-1 px-4 w-40 md:mt-16 mx-auto"
         >
-          Discover more
+          {t("index.section3.button")}
         </a>
       </section>
       <Divider />
