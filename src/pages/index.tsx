@@ -42,7 +42,7 @@ const IndexPage = () => {
           </h2>
         </div>
         <div
-          className="flex-1"
+          className="flex-1 md:ml-28"
           data-sal="slide-left"
           data-sal-delay="300"
           data-sal-easing="ease-out"
@@ -213,7 +213,7 @@ const IndexPage = () => {
             <h2 className="text-center text-2xl my-8 text-gray-4a md:text-3xl">
               <strong>{t("index.section3.h2img1")}</strong>
             </h2>
-            <p className="text-center text-gray-222">
+            <p className="text-center text-gray-222 md:mb-20">
               {t("index.section3.pimg1")}
             </p>
 
@@ -244,7 +244,7 @@ const IndexPage = () => {
             <h2 className="text-center text-2xl my-8 text-gray-4a md:text-3xl">
               <strong>{t("index.section3.h2img3")}</strong>
             </h2>
-            <p className="text-center text-gray-222">
+            <p className="text-center text-gray-222 md:mb-20">
               {t("index.section3.pimg3")}
             </p>
 

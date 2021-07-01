@@ -74,7 +74,7 @@ const aboutus = () => {
             <img
               src="/images/MISION.jpg"
               alt="SELLO"
-              className="md:max-w-lg max-w-full"
+              className="md:max-w-md max-w-full"
             />
           </div>
           <div className="flex-auto flex flex-col justify-center">
@@ -105,7 +105,7 @@ const aboutus = () => {
             <img
               src="/images/VISION.jpg"
               alt="SELLO"
-              className="md:max-w-lg max-w-full"
+              className="md:max-w-md max-w-full"
             />
           </div>
         </div>
@@ -120,7 +120,7 @@ const aboutus = () => {
             <img
               src="/images/VALUES.jpg"
               alt="SELLO"
-              className="md:max-w-lg max-w-full"
+              className="md:max-w-md max-w-full"
             />
           </div>
           <div className="flex-auto flex flex-col justify-center">
@@ -158,7 +158,7 @@ const aboutus = () => {
             <img
               src="/images/PHILOSOPHY.jpg"
               alt="SELLO"
-              className="md:max-w-lg max-w-full"
+              className="md:max-w-md max-w-full"
             />
           </div>
         </div>
