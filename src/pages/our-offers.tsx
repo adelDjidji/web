@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next"
+import { Link } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/Layout"
 import Divider from "../components/Divider"
-import { Link } from "gatsby"
 
 const openSolutions = () => {
   const { t } = useTranslation()
@@ -44,12 +44,12 @@ const openSolutions = () => {
           data-sal-easing="ease-out"
         >
           <p className="md:max-w-md">{t("openSolutions.section1.p")}</p>
-          <a
-            href="#"
+          <Link
+            to="/contactus"
             className="text-center block text-white bg-orange-bohr border-orange-bohr rounded-full border-solid border-4 md:py-2 py-1 px-4 w-28 mt-10 text-sm"
           >
             {t("openSolutions.section1.button")}
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -201,12 +201,12 @@ const openSolutions = () => {
           data-sal-easing="ease-out"
         >
           <p className="max-w-md">{t("openSolutions.section5.p")}</p>
-          <a
-            href="#"
+          <Link
+            to="/contactus"
             className="text-center block text-white bg-orange-bohr border-orange-bohr rounded-full border-solid border-4 md:py-2 py-1 px-4 w-28 mt-10 text-sm"
           >
             {t("openSolutions.section5.button")}
-          </a>
+          </Link>
         </div>
       </section>
       {/* section6 */}

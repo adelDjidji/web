@@ -45,12 +45,12 @@ const openSolutions = () => {
           data-sal-easing="ease-out"
         >
           <p className="max-w-md">{t("openSolutions.section3.p")}</p>
-          <a
-            href="#"
+          <Link
+            to="/contactus"
             className="text-center block text-white bg-orange-bohr border-orange-bohr rounded-full border-solid border-4 md:py-2 py-1 px-4 w-36 mt-10 text-sm"
           >
             {t("openSolutions.section3.button")}
-          </a>
+          </Link>
         </div>
       </section>
       {/* section4 */}
@@ -158,8 +158,7 @@ const openSolutions = () => {
           <div className="flex-1 md:max-w-md md:mx-4"></div>
         </div>
       </section>
-
-   </Layout>
+    </Layout>
   )
 }
 

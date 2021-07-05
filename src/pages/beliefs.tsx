@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next"
+import { Link } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "../components/Layout"
 import Divider from "../components/Divider"
@@ -37,12 +38,12 @@ const beliefs = () => {
         >
           <p className="md:max-w-md mb-4">{t("beliefs.section1.p1")}</p>
           <p className="md:max-w-md">{t("beliefs.section1.p2")}</p>
-          <a
-            href="#"
+          <Link
+            to="/contactus"
             className="block text-white bg-orange-bohr border-orange-bohr rounded-full border-solid border-4 md:py-2 py-1 px-4 w-52 mt-10 text-sm"
           >
             {t("beliefs.section1.button")}
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -168,15 +169,15 @@ const beliefs = () => {
       </section>
 
       <div className="w-full">
-        <a
-          href="#"
+        <Link
+          to="/contactus"
           className="text-center block text-white bg-orange-bohr border-orange-bohr rounded-full border-solid border-4 md:py-5 py-3 px-4 w-40 md:mt-16 mt-12 mx-auto mb-10"
           data-sal="fade"
           data-sal-delay="300"
           data-sal-easing="ease-out"
         >
           {t("beliefs.section2.button")}
-        </a>
+        </Link>
       </div>
     </Layout>
   )
