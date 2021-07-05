@@ -25,7 +25,7 @@ const beliefs = () => {
           data-sal-delay="300"
           data-sal-easing="ease-out"
         >
-          <h2 className="text-2xl md:text-3xl md:max-w-xs mb-7">
+          <h2 className="text-2xl md:text-4xl md:max-w-sm mb-7">
             {t("beliefs.section1.h2")}
           </h2>
         </div>
@@ -51,7 +51,7 @@ const beliefs = () => {
       </div>
       {/* section2 */}
       <section className="container flex justify-center mx-auto mt-10">
-        <div className="flex-1 text-gray-4a flex flex-col items-end text-3xl mr-32">
+        <div className="flex-1 text-gray-4a flex flex-col items-center text-3xl">
           <div
             className="max-w-sm"
             data-sal="slide-right"

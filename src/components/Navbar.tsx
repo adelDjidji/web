@@ -4,18 +4,17 @@ import { Link } from "gatsby"
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
-
   return (
     <div className="md:static fixed top-0 z-40 bg-white w-full">
       {!toggle && (
         <nav className="py-5 lg:px-20 md:px-2 px-4 flex items-center justify-between">
-          <a href="#">
+          <Link to="/">
             <img
               src="./bohr.png"
               alt="bohr energie"
               className="md:w-36 md:h-16 sm:w-28 sm:h-12 w-20 h-8 cursor-pointer"
             />
-          </a>
+          </Link>
           <div className={"text-sm md:flex hidden"}>
             <ul className="flex items-center hover:text-gray-300">
               <li className="m-2 hover:text-gray-800">
@@ -25,10 +24,10 @@ const Navbar = () => {
                 <Link to="/aboutus">About us</Link>
               </li>
               <li className="m-2 hover:text-gray-800">
-                <Link to="/open-solutions">Open solutions</Link>
+                <Link to="/our-offers">Our offers</Link>
               </li>
               <li className="m-2 hover:text-gray-800">
-                <Link to="/be-our-client">Be our client</Link>
+                <Link to="/our-services">Our services</Link>
               </li>
               <li className="m-2 hover:text-gray-800">
                 <Link to="/key-benefits">Key benefits</Link>
@@ -87,12 +86,12 @@ const Navbar = () => {
           About us
         </Link>
 
-        <Link className="m-2 hover:text-gray-800" to="/open-solutions">
-          Open solutions
+        <Link className="m-2 hover:text-gray-800" to="/our-offers">
+          Open Offers
         </Link>
 
-        <Link className="m-2 hover:text-gray-800" to="/be-our-client">
-          Be our client
+        <Link className="m-2 hover:text-gray-800" to="/our-services">
+          Our Services
         </Link>
 
         <Link className="m-2 hover:text-gray-800" to="/key-benefits">

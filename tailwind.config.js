@@ -28,6 +28,8 @@ module.exports = {
         "hero-customer": "url('/images/CABECERA_CUSTOMER.jpg')",
         "hero-beliefs": "url('/images/CABECERA_BELIEFS.jpg')",
         "hero-solutions": "url('/images/CABECERA_SOLUTIONS.jpg')",
+        "flag-france": "url('/images/france.png')",
+        "flag-usa": "url('/images/usa.png')",
       }),
       height: {
         "330p": "330px",

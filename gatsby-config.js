@@ -39,5 +39,13 @@ module.exports = {
     "gatsby-plugin-postcss",
 
     "gatsby-background-image-es5",
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
   ],
 }
