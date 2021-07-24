@@ -1,4 +1,14 @@
 {
+  "navBar":{
+    "home":"Accueil",
+    "aboutUs":"à propos de Nous",
+    "ourOffers":"Nos offres",
+    "ourServices":"Nos services",
+    "keyBenefits":"Nos avantages",
+    "beliefs":"Nos Principes",
+    "contactUs":"Contactez nous",
+    "clientSpace":"Espace client"
+  },
   "index": {
     "hero" : {
       "l1":"Changez",
@@ -33,7 +43,7 @@
       "pimg1" :"Des solutions digitales agiles et faciles d'utilisation.",
       "h2img2" :"Des prix justes",
       "pimg2" :"Transparence des prix et optimisation votre consommation et votre abonnement.",
-      "h2img3" : "Un service client personnalisé",
+      "h2img3" : "Service client personnalisé",
       "pimg3" : " Un accompagnement sur mesure pour la mise en place de vos solutions énergétiques.",
       "h2img4" :"Energie verte",
       "pimg4" : " Une energie 100% renouvelable pour un monde plus durable.",
@@ -128,7 +138,7 @@
     "ul1p2":"Cela couvre les indicateurs de solutions climatiques et les problèmes climatiques dans la technologie, les secteurs et les industries.",
     "ul1li3":"Score Climat",
     "ul1p3" : "Cela comprend des indicateurs qualitatifs liés au climat.",
-    "button":"Start"
+    "button":"Contactez-nous"
   }
   },
   "keyBenefits":{
@@ -150,10 +160,10 @@
       "pimg3":"Obtenez un accompagnement personnalisé pour mettre en place une solution énergétique sur mesure pour votre entreprise.",
       "h3img4":"Energie verte",
       "pimg4":"Transformez votre entreprise en une entreprise durable avec nos solutions d'énergie renouvelable.",
-      "button":"Start"
+      "button":"Contactez-nous"
     }
   },
-  "Open solutions":{
+  "openSolutions":{
     "hero":{
       "l1":"Notre",
       "l2":"solution",

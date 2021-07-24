@@ -1,9 +1,12 @@
 import { useState } from "react"
 import { Transition } from "@headlessui/react"
 import { Link } from "gatsby"
+import { useTranslation } from "react-i18next"
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
+  const { t } = useTranslation()
+
   return (
     <div className="md:static fixed top-0 z-40 bg-white w-full">
       {!toggle && (
@@ -18,35 +21,35 @@ const Navbar = () => {
           <div className={"text-sm md:flex hidden"}>
             <ul className="flex items-center hover:text-gray-300">
               <li className="m-2 hover:text-gray-800">
-                <Link to="/">Home</Link>
+                <Link to="/">{t("navBar.home")}</Link>
               </li>
               <li className="m-2 hover:text-gray-800">
-                <Link to="/aboutus">About us</Link>
+                <Link to="/aboutus">{t("navBar.aboutUs")}</Link>
               </li>
               <li className="m-2 hover:text-gray-800">
-                <Link to="/our-offers">Our offers</Link>
+                <Link to="/our-offers">{t("navBar.ourOffers")}</Link>
               </li>
               <li className="m-2 hover:text-gray-800">
-                <Link to="/our-services">Our services</Link>
+                <Link to="/our-services">{t("navBar.ourServices")}</Link>
               </li>
               <li className="m-2 hover:text-gray-800">
-                <Link to="/key-benefits">Key benefits</Link>
+                <Link to="/key-benefits">{t("navBar.keyBenefits")}</Link>
               </li>
               <li className="m-2 hover:text-gray-800">
-                <Link to="/beliefs">Beliefs</Link>
+                <Link to="/beliefs">{t("navBar.beliefs")}</Link>
               </li>
             </ul>
             <Link
               to="/contactus"
               className="m-2 border-orange-bohr text-orange-bohr rounded-full border-solid border-2 py-2 px-4 hover:text-white hover:bg-orange-bohr"
             >
-              Contact us
+              {t("navBar.contactUs")}
             </Link>
             <Link
               to="/app"
               className="m-2 border-orange-bohr text-orange-bohr rounded-full border-solid border-2 py-2 px-4 hover:text-white hover:bg-orange-bohr"
             >
-              Espace client
+              {t("navBar.clientSpace")}
             </Link>
           </div>
           <label htmlFor="open__menu" className="md:hidden block">
@@ -79,37 +82,37 @@ const Navbar = () => {
         className="flex flex-col items-center text-2xl justify-center hover:text-gray-300 absolute z-50 bg-white w-full h-screen"
       >
         <Link className="m-2 hover:text-gray-800" to="/">
-          Home
+          {t("navBar.home")}
         </Link>
 
         <Link className="m-2 hover:text-gray-800" to="/aboutus">
-          About us
+          {t("navBar.aboutUs")}
         </Link>
 
         <Link className="m-2 hover:text-gray-800" to="/our-offers">
-          Open Offers
+          {t("navBar.ourOffers")}
         </Link>
 
         <Link className="m-2 hover:text-gray-800" to="/our-services">
-          Our Services
+          {t("navBar.ourServices")}
         </Link>
 
         <Link className="m-2 hover:text-gray-800" to="/key-benefits">
-          Key benefits
+          {t("navBar.keyBenefits")}
         </Link>
 
         <Link className="m-2 hover:text-gray-800" to="/beliefs">
-          Beliefs
+          {t("navBar.beliefs")}
         </Link>
 
         <Link
           className="m-2 hover:text-gray-800 text-orange-bohr"
           to="/contactus"
         >
-          Contact us
+          {t("navBar.contactUs")}
         </Link>
         <Link className="m-2 hover:text-gray-800 text-orange-bohr" to="/app">
-          Espace client
+          {t("navBar.clientSpace")}
         </Link>
         <label htmlFor="close__menu" className="absolute top-0 right-0 m-5">
           <svg

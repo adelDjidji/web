@@ -1,4 +1,14 @@
 {
+  "navBar":{
+    "home":"Home",
+    "aboutUs":"About us",
+    "ourOffers":"Our offers",
+    "ourServices":"Our services",
+    "keyBenefits":"key benefits",
+    "beliefs":"Beliefs",
+    "contactUs":"Contact us",
+    "clientSpace":"Customer Area"
+  },
     "index": {
       "hero" : {
         "l1":"Change",

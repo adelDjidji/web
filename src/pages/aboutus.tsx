@@ -168,7 +168,7 @@ const aboutus = () => {
       <div className="w-full">
         <Link
           to="/contactus"
-          className="text-center block text-white bg-orange-bohr border-orange-bohr rounded-full border-solid border-4 md:py-5 py-3 px-4 w-40 md:mt-16 mt-12 mx-auto mb-10"
+          className="text-center block text-white bg-orange-bohr border-orange-bohr rounded-full border-solid border-4 md:py-5 py-3 w-40 md:mt-16 mt-12 mx-auto mb-10"
           data-sal="fade"
           data-sal-delay="300"
           data-sal-easing="ease-out"
