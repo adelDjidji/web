@@ -1,37 +1,103 @@
+import { useState } from "react"
 import { makeStyles } from "@material-ui/core/styles"
+
 import DashboardIcon from "@material-ui/icons/Dashboard"
+import BatteryCharging90Icon from "@material-ui/icons/BatteryCharging90"
+import PaymentIcon from "@material-ui/icons/Payment"
+import PermIdentityIcon from "@material-ui/icons/PermIdentity"
+import ReceiptIcon from "@material-ui/icons/Receipt"
+import HelpIcon from "@material-ui/icons/Help"
+import ExitToAppIcon from "@material-ui/icons/ExitToApp"
 
 import Button from "@material-ui/core/Button"
 
 import { navigate, Link } from "@reach/router"
-import RenderOnAnonymous from "./RenderOnAnonymous"
-import RenderOnAuthenticated from "./RenderOnAuthenticated"
+import { Drawer } from "@material-ui/core"
+
+import CssBaseline from "@material-ui/core/CssBaseline"
+
+import Divider from "@material-ui/core/Divider"
+import IconButton from "@material-ui/core/IconButton"
+
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos"
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos"
+
+const drawerWidth = 240
 
 const useStyles = makeStyles(theme => ({
-  container: {
+  root: {
     display: "flex",
-    justifyContent: "flex-end",
-    margin: theme.spacing(1),
-    marginRight: theme.spacing(3),
   },
+
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  drawerHeader: {
+    display: "flex",
+    alignItems: "center",
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+    justifyContent: "flex-end",
+  },
+
   button: {
+    marginTop: theme.spacing(3),
     margin: theme.spacing(1),
+    justifyContent: "start",
+  },
+  icons: {
+    marginRight: theme.spacing(1),
+  },
+  arrow: {
+    marginLeft: theme.spacing(1.5),
   },
 }))
 
-const TopBar: React.FC = () => (
-  <>
-    <TopbarAnonymous />
-    <TopbarAuth />
-  </>
-)
-
-const TopbarAnonymous: React.FC = () => {
+export default function PersistentDrawerLeft() {
   const classes = useStyles()
+  const [open, setOpen] = useState(false)
+
+  const handleDrawerOpen = () => {
+    setOpen(true)
+  }
+
+  const handleDrawerClose = () => {
+    setOpen(false)
+  }
 
   return (
-    <RenderOnAnonymous>
-      <div className={classes.container}>
+    <div className={classes.root}>
+      <CssBaseline />
+
+      <IconButton
+        color="inherit"
+        aria-label="open drawer"
+        onClick={handleDrawerOpen}
+        edge="start"
+      >
+        <ArrowForwardIosIcon className={classes.arrow} />
+      </IconButton>
+
+      <Drawer
+        className={classes.drawer}
+        variant="persistent"
+        anchor="left"
+        open={open}
+        classes={{
+          paper: classes.drawerPaper,
+        }}
+      >
+        <div className={classes.drawerHeader}>
+          <IconButton onClick={handleDrawerClose}>
+            <ArrowBackIosIcon />
+          </IconButton>
+        </div>
+        <Divider />
         <Button
           component={Link}
           to={"/app/dashboard"}
@@ -39,39 +105,8 @@ const TopbarAnonymous: React.FC = () => {
           color="primary"
           size="large"
           className={classes.button}
-          startIcon={<DashboardIcon />}
         >
-          Espace client
-        </Button>
-
-        <Button
-          component={Link}
-          to={"/app/subscribe"}
-          variant="contained"
-          color="primary"
-          size="large"
-          className={classes.button}
-        >
-          Souscrire
-        </Button>
-      </div>
-    </RenderOnAnonymous>
-  )
-}
-const TopbarAuth: React.FC = () => {
-  const classes = useStyles()
-
-  return (
-    <RenderOnAuthenticated>
-      <div className={classes.container}>
-        <Button
-          component={Link}
-          to={"/app/dashboard"}
-          variant="contained"
-          color="primary"
-          size="large"
-          className={classes.button}
-        >
+          <DashboardIcon className={classes.icons} />
           Dashboard
         </Button>
         <Button
@@ -82,7 +117,7 @@ const TopbarAuth: React.FC = () => {
           size="large"
           className={classes.button}
         >
-          Consommation
+          <BatteryCharging90Icon className={classes.icons} /> Consommation
         </Button>
         <Button
           component={Link}
@@ -92,6 +127,7 @@ const TopbarAuth: React.FC = () => {
           size="large"
           className={classes.button}
         >
+          <PaymentIcon className={classes.icons} />
           Payments
         </Button>
         <Button
@@ -102,6 +138,7 @@ const TopbarAuth: React.FC = () => {
           size="large"
           className={classes.button}
         >
+          <PermIdentityIcon className={classes.icons} />
           Informations
         </Button>
         <Button
@@ -112,6 +149,7 @@ const TopbarAuth: React.FC = () => {
           size="large"
           className={classes.button}
         >
+          <ReceiptIcon className={classes.icons} />
           Contrats
         </Button>
 
@@ -123,6 +161,7 @@ const TopbarAuth: React.FC = () => {
           size="large"
           className={classes.button}
         >
+          <HelpIcon className={classes.icons} />
           aide
         </Button>
 
@@ -136,11 +175,10 @@ const TopbarAuth: React.FC = () => {
             navigate("/app/home")
           }}
         >
+          <ExitToAppIcon className={classes.icons} />
           Déconnecter
         </Button>
-      </div>
-    </RenderOnAuthenticated>
+      </Drawer>
+    </div>
   )
 }
-
-export default TopBar
