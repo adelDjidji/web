@@ -36,17 +36,17 @@ const LoginForm: FC<Props> = () => {
   const dispatch = useDispatch()
 
   const [email, setEmail] = useState("")
-  const [refClient, setRefClient] = useState("")
+  // const [refClient, setRefClient] = useState("")
   const [isLoading, setIsLoading] = useState(false)
 
   const handleChange = (name: string) => ({
     target: { value },
   }: {
     target: { value: string }
-  }) => (name === "email" ? setEmail(value.toLowerCase()) : setRefClient(value))
+  }) => (setEmail(value.toLowerCase()) )
 
   const handleValidation = () => {
-    return email.length > 0 && !validateEmail() && validateRefClient()
+    return email.length > 0 && !validateEmail()
   }
 
   const handleKeyPress = (e: any) => {
@@ -57,7 +57,7 @@ const LoginForm: FC<Props> = () => {
 
   const handleClick = () => {
     setIsLoading(true)
-    ApiService.ForgotPassword({ email, refClient })
+    ApiService.ForgotPassword({ email })
       .then(res => {
         dispatch(successMessage(res.data.message))
         navigate("/app/")
@@ -75,10 +75,10 @@ const LoginForm: FC<Props> = () => {
     return !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)
   }
 
-  const validateRefClient = () => {
-    if (refClient.length < 3) return false
-    return true
-  }
+  // const validateRefClient = () => {
+  //   if (refClient.length < 3) return false
+  //   return true
+  // }
   return (
     <Grid
       container
@@ -110,7 +110,7 @@ const LoginForm: FC<Props> = () => {
                 ),
               }}
             />
-            <TextField
+            {/* <TextField
               required
               id="refClient"
               label="reference client"
@@ -128,7 +128,7 @@ const LoginForm: FC<Props> = () => {
                   </InputAdornment>
                 ),
               }}
-            />
+            /> */}
           </CardContent>
           <CardActions className={classes.action}>
             {isLoading ? (

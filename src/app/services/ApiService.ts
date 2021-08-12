@@ -6,7 +6,7 @@ const url = process.env.GATSBY_API_URL;
 
 const Login = (body: { email: string; password: string }) =>
   HttpService.post(`${url}auth`, body);
-const ForgotPassword = (body: { email: string; refClient: string }) =>
+const ForgotPassword = (body: { email: string }) =>
   HttpService.post(`${url}reset`, body);
 const Register = (body: IRegister) => HttpService.post(`${url}register`, body);
 const SetPassword = (body: {
