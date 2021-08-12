@@ -3,11 +3,7 @@ import { useTranslation } from "react-i18next"
 import "./Footer.css"
 
 const Footer = () => {
-  const { i18n } = useTranslation()
-
-  const changeLanguageHandler = (lang: string) => {
-    i18n.changeLanguage(lang)
-  }
+  
   return (
     <footer className="flex w-full flex-col justify-between text-black-footer text-lg md:pt-20 pt-10 md:px-16 pl-5 pb-20 border-t-2">
       <div className="flex flex-col items-center mb-12">
@@ -112,38 +108,7 @@ const Footer = () => {
       </div>
       <div className="flex md:justify-start justify-center"></div>
 
-      <div className="p-10">
-        <div className="dropdown inline-block relative">
-          <button className="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
-            <span className="mr-1">{i18n.language}</span>
-            <svg
-              className="fill-current h-4 w-4"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
-            </svg>
-          </button>
-          <ul className="dropdown-menu absolute hidden text-gray-700 pt-1">
-            <li className="">
-              <button
-                onClick={() => changeLanguageHandler("fr")}
-                className="rounded-full bg-contain border w-10 h-10 border-black hover:bg-gray-400 mr-10 md:mr-5"
-              >
-                Fr
-              </button>
-            </li>
-            <li className="">
-              <button
-                onClick={() => changeLanguageHandler("en")}
-                className="rounded-full bg-cover bg-no-repeat border w-10 h-10 border-black hover:bg-gray-400"
-              >
-                En
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
+      
     </footer>
   )
 }

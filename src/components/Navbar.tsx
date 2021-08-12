@@ -5,7 +5,11 @@ import { useTranslation } from "react-i18next"
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+
+  const changeLanguageHandler = (lang: string) => {
+    i18n.changeLanguage(lang)
+  }
 
   return (
     <div className="md:static fixed top-0 z-40 bg-white w-full">
@@ -51,6 +55,44 @@ const Navbar = () => {
             >
               {t("navBar.clientSpace")}
             </Link>
+            <div
+              className="p-10"
+              style={{ position: "absolute", top: -8, right: "-2em" }}
+            >
+              <div className="dropdown inline-block relative">
+                <button className="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
+                  <span className="mr-1">{i18n.language}</span>
+                  <svg
+                    className="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+                  </svg>
+                </button>
+                <ul
+                  className="dropdown-menu absolute hidden text-gray-700 pt-1 bg-white"
+                  style={{ padding: "3pt 8pt", borderRadius: "5pt" }}
+                >
+                  <li className="">
+                    <button
+                      onClick={() => changeLanguageHandler("fr")}
+                      className="rounded-full bg-contain border w-10 h-10 border-black hover:bg-gray-400 mr-10 md:mr-5"
+                    >
+                      Fr
+                    </button>
+                  </li>
+                  <li className="">
+                    <button
+                      onClick={() => changeLanguageHandler("en")}
+                      className="rounded-full bg-cover bg-no-repeat border w-10 h-10 border-black hover:bg-gray-400"
+                    >
+                      En
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <label htmlFor="open__menu" className="md:hidden block">
             <svg
@@ -114,6 +156,46 @@ const Navbar = () => {
         <Link className="m-2 hover:text-gray-800 text-orange-bohr" to="/app">
           {t("navBar.clientSpace")}
         </Link>
+
+        <div
+              className="p-10"
+              // style={{ position: "absolute", top: -8, right: "-2em" }}
+            >
+              <div className="dropdown inline-block relative">
+                <button className="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
+                  <span className="mr-1">{i18n.language}</span>
+                  <svg
+                    className="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />{" "}
+                  </svg>
+                </button>
+                <ul
+                  className="dropdown-menu absolute hidden text-gray-700 pt-1 bg-white"
+                  // style={{ padding: "3pt 8pt", borderRadius: "5pt" }}
+                >
+                  <li className="">
+                    <button
+                      onClick={() => changeLanguageHandler("fr")}
+                      className="rounded-full bg-contain border w-10 h-10 border-black hover:bg-gray-400 mr-10 md:mr-5"
+                    >
+                      Fr
+                    </button>
+                  </li>
+                  <li className="">
+                    <button
+                      onClick={() => changeLanguageHandler("en")}
+                      className="rounded-full bg-cover bg-no-repeat border w-10 h-10 border-black hover:bg-gray-400"
+                    >
+                      En
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
         <label htmlFor="close__menu" className="absolute top-0 right-0 m-5">
           <svg
             className="block h-6 w-6 text-orange-bohr"
